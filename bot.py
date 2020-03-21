@@ -1,4 +1,4 @@
-#!/usr/bin/env python3.6
+#!/usr/bin/env python3.6.5
 # -*- coding: utf-8 -*-
 import discord
 import random
@@ -13,7 +13,7 @@ from asyncio import sleep
 
 
 logging.basicConfig(level='INFO')
-bot = commands.Bot(command_prefix='e!')
+bot = commands.Bot(command_prefix='xl!')
 bot.load_extension("admin")
 bot.remove_command('help')
 bot.load_extension("music")
@@ -85,33 +85,33 @@ async def purge(ctx, number : int):
 @commands.cooldown(1, 5, commands.BucketType.user)
 @bot.command()
 async def help(ctx):
-    await ctx.author.send("""    Elite commands:
-**e!say** : Make the bot say whatever you want
-**e!ping** : Check the bot latency
-**e!search** : Search something on Google
-**e!avatar** : Get a player's avatar
-**e!8ball** : Ask the Magic 8-Ball""")
+    await ctx.author.send("""    My commands:
+**xl!say** : Make the bot say whatever you want
+**xl!ping** : Check the bot latency
+**xl!search** : Search something on Google
+**xl!avatar** : Get a player's avatar
+**xl!8ball** : Ask the Magic 8-Ball""")
     await ctx.author.send("""
-**e!playerinfo @<member>** : Get a member's info
-**e!serverinfo** Get a guild/server info
-**e!botinfo** : Get the bot info
-**e!lenny** : Just a lenny face
-**e!respect** : Pay #respect""")
+**xl!playerinfo @<member>** : Get a member's info
+**xl!serverinfo** Get a guild/server info
+**xl!botinfo** : Get the bot info
+**xl!lenny** : Just a lenny face
+**xl!respect** : Pay #respect""")
     await ctx.author.send("""
-**e!kick** : Kick a member (works only if the player has the Kick perm.)
-**e!ban** : Ban a member (works only if the player has the Ban perm.)
-**e!mass** : Sends a message to all members in a guild (BOT Owner only)
-**e!shutdown** : Shuts down the bot (BOT Owner only)
-**e!purge** : Clears a number of messages (works only if the player has the Manage Channels perm.)
+**xl!kick** : Kick a member (works only if the player has the Kick perm.)
+**xl!ban** : Ban a member (works only if the player has the Ban perm.)
+**xl!mass** : Sends a message to all members in a guild (BOT Owner only)
+**xl!shutdown** : Shuts down the bot (BOT Owner only)
+**xl!purge** : Clears a number of messages (works only if the player has the Manage Channels perm.)
 """)
     await ctx.author.send("""
-**e!play** : Play a song
-**e!stop** : Stops the track
-**e!queue** : See the following tracks
-**e!skip** : Plays the next song
-**e!pause** : Pause the track
-**e!resume** : Unpause the track
-**e!join** : Join a voice channel""")
+**xl!play** : Play a song
+**xl!stop** : Stops the track
+**xl!queue** : See the following tracks
+**xl!skip** : Plays the next song
+**xl!pause** : Pause the track
+**xl!resume** : Unpause the track
+**xl!join** : Join a voice channel""")
     await ctx.send(f':mailbox_with_mail:  | ** {ctx.author.name} ** , check your DMs!')
 
   
@@ -123,7 +123,7 @@ async def help(ctx):
 @bot.listen()
 async def on_message(message : discord.Message):
     if bot.user.mentioned_in(message):
-        await message.channel.send(':sleeping: | You woke me up :( . My prefix is `e!` , for a list of commands type `e!help`', delete_after=10)
+        await message.channel.send(':sleeping: | You woke me up :( . My prefix is `xl!` , for a list of commands type `xl!help`', delete_after=10)
 
 @bot.listen()
 async def on_command_error(ctx, error):
@@ -218,7 +218,7 @@ async def avatar(ctx, member: discord.Member=None):
 @bot.command()
 async def invite(ctx):
     """Gives you the BOT invite link."""
-    await ctx.send("Invite the **{ctx.me.name}** here: https://discordapp.com/api/oauth2/authorize?client_id=463715843931635712&permissions=8&scope=bot")
+    await ctx.send("Invite the **{ctx.me.name}** here: https://discordapp.com/api/oauth2/authorize?client_id=690990161189666926&permissions=8&scope=bot")
 
 
 @commands.cooldown(1, 5, commands.BucketType.user)
@@ -325,7 +325,7 @@ async def presence():
                 if u.bot == False:
                     a = a + 1
 
-        await bot.change_presence(activity=discord.Activity(type=discord.ActivityType.watching, name='%s servers | e?help' % (len(bot.guilds))))
+        await bot.change_presence(activity=discord.Activity(type=discord.ActivityType.watching, name='%s servers | https://discordapp.com/api/oauth2/authorize?client_id=69099https://discordapp.com/api/oauth2/authorize?client_id=690990161189666926&permissions=8&scope=bothelp' % (len(bot.guilds))))
         await sleep(30)
         await bot.change_presence(activity=discord.Activity(type=discord.ActivityType.watching, name='%s users | e?help' % (len(bot.users))))
         await sleep(30)
