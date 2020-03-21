@@ -325,9 +325,9 @@ async def presence():
                 if u.bot == False:
                     a = a + 1
 
-        await bot.change_presence(activity=discord.Activity(type=discord.ActivityType.watching, name='%s servers | https://discordapp.com/api/oauth2/authorize?client_id=69099https://discordapp.com/api/oauth2/authorize?client_id=690990161189666926&permissions=8&scope=bothelp' % (len(bot.guilds))))
+        await bot.change_presence(activity=discord.Activity(type=discord.ActivityType.watching, name='%s servers | xl!help' % (len(bot.guilds))))
         await sleep(30)
-        await bot.change_presence(activity=discord.Activity(type=discord.ActivityType.watching, name='%s users | e?help' % (len(bot.users))))
+        await bot.change_presence(activity=discord.Activity(type=discord.ActivityType.watching, name='%s users | xl!help' % (len(bot.users))))
         await sleep(30)
 
 
@@ -343,7 +343,7 @@ async def botinfo(ctx):
     em.add_field(name="Prefix", value=ctx.bot.command_prefix, inline=True)
     em.add_field(name="Made with", value='Python 3.6.5', inline=True)
     em.add_field(name="Tag:", value=ctx.me.discriminator, inline=True)
-    em.add_field(name="Creator", value='<@404708655578218511>', inline=True)
+    em.add_field(name="Creator", value='<@387720457442295819>', inline=True)
     em.add_field(name="Created at", value=ctx.bot.user.created_at, inline=True)
     em.set_thumbnail(url=ctx.me.avatar_url)
     msg = await ctx.send(embed=em)
@@ -363,7 +363,7 @@ async def binfo(ctx):
     em.add_field(name="Prefix", value=ctx.bot.command_prefix, inline=True)
     em.add_field(name="Made with", value='Python 3.6.5', inline=True)
     em.add_field(name="Tag:", value=ctx.me.discriminator, inline=True)
-    em.add_field(name="Creator", value='<@404708655578218511>', inline=True)
+    em.add_field(name="Creator", value='<@387720457442295819>', inline=True)
     em.add_field(name="Created at", value=ctx.bot.user.created_at, inline=True)
     em.set_thumbnail(url=ctx.me.avatar_url)
     msg = await ctx.send(embed=em)
